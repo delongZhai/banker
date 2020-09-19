@@ -16,7 +16,6 @@ import { OverviewPageModule } from './pages/overview/overview-page.module';
 import { SettingsPageModule } from './pages/settings/settings-page.module';
 import { RallyFinanceCardModule } from './shared/components/rally-finance-card/rally-finance-card.module';
 
-
 @NgModule({
   declarations: [AppComponent],
   imports: [
