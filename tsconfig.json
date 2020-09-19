@@ -1,8 +1,5 @@
 {
-  "include": [
-    "src/**/*.ts",
-    "test/**/*.ts"
-  ],
+  "include": ["src/**/*.ts"],
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": "./",
@@ -15,13 +12,9 @@
     "moduleResolution": "node",
     "importHelpers": true,
     "target": "es2015",
-    "typeRoots": [
-      "node_modules/@types"
-    ],
-    "lib": [
-      "es2018",
-      "dom"
-    ]
+    "typeRoots": ["node_modules/@types"],
+    "lib": ["es2018", "dom"],
+    "paths": {}
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
