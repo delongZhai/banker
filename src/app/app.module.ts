@@ -15,6 +15,11 @@ import { LoginModule } from './pages/login/login.module';
 import { OverviewPageModule } from './pages/overview/overview-page.module';
 import { SettingsPageModule } from './pages/settings/settings-page.module';
 import { RallyFinanceCardModule } from './shared/components/rally-finance-card/rally-finance-card.module';
+import { StoreModule } from '@ngrx/store';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { environment } from '../environments/environment';
+import { EffectsModule } from '@ngrx/effects';
+import { StoreRouterConnectingModule } from '@ngrx/router-store';
 
 @NgModule({
   declarations: [AppComponent],
@@ -34,6 +39,10 @@ import { RallyFinanceCardModule } from './shared/components/rally-finance-card/r
     SettingsPageModule,
     MatToolbarModule,
     FlexLayoutModule,
+    StoreModule.forRoot({}, {}),
+    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
+    EffectsModule.forRoot([]),
+    StoreRouterConnectingModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent],
